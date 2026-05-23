@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode — Ivory & Obsidian */
+    --background: 40 30% 97%;
+    --foreground: 240 10% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+
+    --primary: 38 61% 58%;
+    --primary-foreground: 240 10% 5%;
+
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 240 10% 15%;
+
+    --muted: 40 20% 90%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 40 70% 92%;
+    --accent-foreground: 38 61% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 88%;
+    --ring: 38 61% 58%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gold: #D4A853;
+    --gold-light: #f0db90;
+    --gold-dark: #a07828;
+    --nile: #1e6ba8;
+    --nile-dark: #144d7a;
+  }
+
+  .dark {
+    /* Dark Mode — Pharaonic Obsidian & Gold */
+    --background: 240 20% 5%;
+    --foreground: 40 30% 94%;
+
+    --card: 240 18% 8%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 240 18% 8%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 38 61% 58%;
+    --primary-foreground: 240 10% 5%;
+
+    --secondary: 240 15% 12%;
+    --secondary-foreground: 40 20% 80%;
+
+    --muted: 240 15% 14%;
+    --muted-foreground: 240 10% 55%;
+
+    --accent: 240 15% 14%;
+    --accent-foreground: 38 61% 65%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 15% 15%;
+    --input: 240 15% 13%;
+    --ring: 38 61% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  [lang='ar'] body,
+  .font-cairo,
+  [dir='rtl'] {
+    font-family: var(--font-cairo), 'Cairo', sans-serif;
+  }
+
+  html[dir='rtl'] {
+    direction: rtl;
+  }
+}
+
+/* ═══════════════════════════════════════
+   Geometric Background Pattern
+═══════════════════════════════════════ */
+.geo-pattern {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(212, 168, 83, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(30, 107, 168, 0.04) 0%, transparent 50%);
+}
+
+.dark .geo-pattern {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(212, 168, 83, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(30, 107, 168, 0.06) 0%, transparent 50%);
+}
+
+/* ═══════════════════════════════════════
+   Pyramid Grid Background
+═══════════════════════════════════════ */
+.pyramid-grid {
+  background-image:
+    linear-gradient(rgba(212, 168, 83, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 168, 83, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.dark .pyramid-grid {
+  background-image:
+    linear-gradient(rgba(212, 168, 83, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 168, 83, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ═══════════════════════════════════════
+   Gold Shimmer Effect
+═══════════════════════════════════════ */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold-dark) 0%,
+    var(--gold-light, #f0db90) 50%,
+    var(--gold-dark) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ═══════════════════════════════════════
+   Glass Card
+═══════════════════════════════════════ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-card {
+  background: rgba(13, 13, 22, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 168, 83, 0.12);
+}
+
+/* ═══════════════════════════════════════
+   Gold Glow
+═══════════════════════════════════════ */
+.gold-glow {
+  box-shadow: 0 0 30px -5px rgba(212, 168, 83, 0.3);
+}
+
+.dark .gold-glow {
+  box-shadow: 0 0 40px -5px rgba(212, 168, 83, 0.4);
+}
+
+/* ═══════════════════════════════════════
+   ID Input Styling
+═══════════════════════════════════════ */
+.id-input {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.15em;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .id-input {
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ═══════════════════════════════════════
+   Result Card Gradients
+═══════════════════════════════════════ */
+.card-gender-male {
+  background: linear-gradient(135deg, rgba(30, 107, 168, 0.08) 0%, transparent 100%);
+  border-color: rgba(30, 107, 168, 0.2);
+}
+.card-gender-female {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, transparent 100%);
+  border-color: rgba(236, 72, 153, 0.2);
+}
+.card-birth {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, transparent 100%);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+.card-gov {
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.08) 0%, transparent 100%);
+  border-color: rgba(212, 168, 83, 0.2);
+}
+.card-age {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, transparent 100%);
+  border-color: rgba(168, 85, 247, 0.2);
+}
+.card-century {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, transparent 100%);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+/* ═══════════════════════════════════════
+   Scrollbar Styling
+═══════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 168, 83, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 168, 83, 0.5);
+}
+
+/* ═══════════════════════════════════════
+   Focus Styles
+═══════════════════════════════════════ */
+*:focus-visible {
+  outline: 2px solid rgba(212, 168, 83, 0.6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ═══════════════════════════════════════
+   RTL Support
+═══════════════════════════════════════ */
+[dir='rtl'] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+[dir='rtl'] .text-left {
+  text-align: right;
+}
+
+/* ═══════════════════════════════════════
+   Print Styles
+═══════════════════════════════════════ */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; color: black; }
+}

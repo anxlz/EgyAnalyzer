@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Egyptian National ID Analyzer",
+    "description": "Instantly decode publicly derivable information from an Egyptian National ID number. All processing happens locally in your browser.",
+    "ogTitle": "Egyptian National ID Analyzer — Decode Your ID",
+    "ogDescription": "Enter your 14-digit Egyptian National ID to extract birth date, gender, age, and governorate — privately, locally, instantly."
+  },
+  "nav": {
+    "title": "ID Analyzer",
+    "subtitle": "Egyptian National ID",
+    "langSwitch": "العربية",
+    "theme": {
+      "toggle": "Toggle theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    }
+  },
+  "hero": {
+    "eyebrow": "Powered by Public Data",
+    "title": "Egyptian National ID",
+    "titleAccent": "Analyzer",
+    "subtitle": "Instantly decode your 14-digit Egyptian National ID number. Extract birth date, gender, age, and governorate — all processed privately in your browser.",
+    "badge": "100% Client-Side • No Data Stored",
+    "privacy": "All processing happens locally in your browser. No ID data is stored or transmitted.",
+    "secureBadge": "Secure & Private"
+  },
+  "input": {
+    "label": "National ID Number",
+    "placeholder": "Enter 14-digit Egyptian National ID",
+    "hint": "Example: 29505050217415",
+    "analyze": "Analyze ID",
+    "analyzing": "Analyzing...",
+    "clear": "Clear",
+    "errors": {
+      "required": "Please enter a National ID number.",
+      "tooShort": "ID must be exactly 14 digits.",
+      "tooLong": "ID must be exactly 14 digits.",
+      "nonNumeric": "ID must contain digits only.",
+      "invalid": "This ID number is not valid."
+    },
+    "valid": "Valid format"
+  },
+  "results": {
+    "title": "Analysis Results",
+    "subtitle": "Information decoded from ID",
+    "valid": "Valid ID",
+    "invalid": "Invalid ID",
+    "gender": "Gender",
+    "birthDate": "Birth Date",
+    "age": "Age",
+    "ageUnit": "years old",
+    "governorate": "Governorate",
+    "century": "Century",
+    "isAdult": "Legal Status",
+    "adult": "Adult (18+)",
+    "minor": "Minor (under 18)",
+    "formattedId": "Formatted ID",
+    "male": "Male",
+    "female": "Female",
+    "idSummary": "ID Summary",
+    "personalInfo": "Personal Info",
+    "location": "Location",
+    "copyId": "Copy ID",
+    "copied": "Copied!",
+    "shareResults": "Share Results",
+    "tryAnother": "Analyze Another"
+  },
+  "privacy": {
+    "title": "Privacy First",
+    "body": "All processing happens locally in your browser. No ID data is stored or transmitted to any server."
+  },
+  "footer": {
+    "disclaimer": "This tool only extracts publicly derivable information encoded in the ID number structure. It does not access any government database or citizen records.",
+    "copyright": "© 2025 Egyptian ID Analyzer. Built with Next.js & React.",
+    "github": "View on GitHub"
+  },
+  "accessibility": {
+    "idInput": "National ID input field, enter 14 digits",
+    "analyzeButton": "Analyze the entered national ID",
+    "themeToggle": "Toggle color theme",
+    "languageSwitch": "Switch language",
+    "resultCard": "Analysis result card",
+    "validIcon": "Valid ID checkmark",
+    "invalidIcon": "Invalid ID error icon"
+  }
+}
